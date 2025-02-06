@@ -7,7 +7,7 @@ def f(a, b, m):
     else:
         return all(h) # Если был совершен неудачный ход, то all -> any
 
-
+# Устанавливаем стартовые позиции, если надо делаем две кучи
 print('19)', [s for s in range(1, 54) if f( 5,s, 2)])
 print('20)', [s for s in range(1, 2199) if f(s, 3) and not f(s, 1) ])
 print('21)', [s for s in range(1, 2199) if  f( s, 4)])
