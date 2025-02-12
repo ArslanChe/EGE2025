@@ -1,8 +1,12 @@
 #19878
+# Чтение файла
 with open("9.txt") as f:
     c = 0
+    # Чтение строки
     for line in f:
         s = list(map(int,line.strip().split()))
+
+        # Обработка строки
         if len(set(s)) == 5:
             d = {}
             for i in s:
