@@ -50,8 +50,16 @@ setrecursionlimit(10000)
 #         c += 1
 # print(c)
 
+# def f(n):
+#     if n > 400:
+#         return n**n
+#     return n+6+f(n+12)
+# print(f(72)-f(108))
+
+
+#5154
 def f(n):
-    if n > 400:
-        return n**n
-    return n+6+f(n+12)
-print(f(72)-f(108))
+    if n > 100_000:
+        return n
+    return f(n+1)+5*n+2
+print(f(3)- f(7))
