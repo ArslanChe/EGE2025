@@ -29,3 +29,17 @@
 #             if all(f(**dict(zip(p, t))) == t[-1] for t in tmp):
 #                 print(*p)
 #                 break
+# print('x y z w')
+# for x in range(0,2):
+#     for y in range(0,2):
+#         for z in range(0,2):
+#             for w in range(0,2):
+#                 if not(w <= (x==y))and(z<=x):
+#                     print(x,y,z,w)
+
+
+for x in (0,1):
+    for y in (0,1):
+        for z in (0,1):
+            for w in (0,1):
+                if(w== not())
