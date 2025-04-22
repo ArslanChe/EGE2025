@@ -63,14 +63,22 @@ setrecursionlimit(10000)
 #         return n
 #     return f(n+1)+5*n+2
 # print(f(3)- f(7))
+# @lru_cache(maxsize=None)
+# def f(n):
+#     if n == 0: return 0
+#     if n >0 and n %2 == 0:
+#         return f(n//10) + n%10
+#     return f(n//10)
+# c = 0
+# for i in range(10**7,6*10**7+1):
+#     if f(i) == 0:
+#         c += 1
+# print(c)
 @lru_cache(maxsize=None)
 def f(n):
-    if n == 0: return 0
-    if n >0 and n %2 == 0:
-        return f(n//10) + n%10
-    return f(n//10)
-c = 0
-for i in range(10**7,6*10**7+1):
-    if f(i) == 0:
-        c += 1
-print(c)
+    if n < 20:
+        return n
+    return (n-6)*f(n-7)
+for _ in range(50000):
+    f(_)
+print((f(47872)-290*f(47865))/f(47858))
