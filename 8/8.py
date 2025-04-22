@@ -14,8 +14,13 @@ from itertools import  product
 #     if s[0] != 'Я' and s.count('Ь') <= 1 and s.count('ЯЯ') == 0:
 #         print(i + 1)
 
-for i, t in enumerate(product(sorted('МАРИЯ'), repeat=4)):
-    s = ''.join(t)
-    if s == 'АРИЯ':
+# for i, t in enumerate(product(sorted('МАРИЯ'), repeat=4)):
+#     s = ''.join(t)
+#     if s == 'АРИЯ':
+#         print(i+1)
+#         break
+
+for i, t in enumerate(product(sorted('ПОБЕДА'), repeat=6)):
+    s = "".join(t)
+    if len(s) == len(set(s)) and s[0] == 'О':
         print(i+1)
-        break
